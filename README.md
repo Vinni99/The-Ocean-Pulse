@@ -1,7 +1,6 @@
 # The-Ocean-Pulse
 Ocean Pulse: Break Finder
 
-hello
 ## Description
 
 ## Acceptance Criteria
