@@ -19,6 +19,6 @@ const sess = {
 	resave: false,
 	saveUninitialized: true,
 	store: new SequelizeStore({
-		db: sequalize,
+		db: sequelize,
 	}),
 };
