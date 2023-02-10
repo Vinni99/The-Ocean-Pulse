@@ -1,6 +1,10 @@
-module.exports = function (req, res, next) {
-	if (req.user) {
-		return next();
+// function for checking to see if a user is logged in.
+const isAuthenticated = (req, res, next) => {
+	if (!req.session.logged_in) {
+		res.redirect("/login");
+	} else {
+		next();
 	}
-	return res.redirect("/");
 };
+
+module.exports = isAuthenticated;
