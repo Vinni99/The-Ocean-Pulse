@@ -32,7 +32,18 @@
     background: rgb(147, 206, 237);
     height: 15vh;
   }
-  header, footer, article, aside {
+  header, footer {
     padding: 1rem;
   }
 
+  aside {
+    padding: 2rem;
+  }
+  /* article {
+    padding: 100px;
+  } */
+
+.carousel-item {
+  padding: 4rem;
+
+}
