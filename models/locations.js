@@ -3,6 +3,7 @@ const router = require('express').Router();
 const surfSpots = [
     {
       surf_spot: 'Ocean Beach',
+      location: 'San Francisco',
       type: 'Beach - sand bottom with shifting peaks',
       optimal_swell_direction: 'NW, W, SW',
       optimal_wind: 'light to none - up to 10mph NE',
@@ -11,6 +12,7 @@ const surfSpots = [
     },
     {
       surf_spot: 'Mavericks',
+      location: 'Half Moon Bay',
       type: 'Reef - rock bottom',
       optimal_swell_direction: 'NW, W, SW',
       optimal_wind: 'light to none - up to 10mph NE',
