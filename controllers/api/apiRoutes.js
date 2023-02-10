@@ -1,14 +1,10 @@
-// add routes for
+// add routes for the locations models
 const db = require("../../models");
 
 //accessing the db for the locals
-db.local.create({
-	//adding database with sequalize?
-});
+  
+//get route for locations
 
-//signup route
+//post route for comments
 
-//login route
-
-//logout route
 appendFile.get;
