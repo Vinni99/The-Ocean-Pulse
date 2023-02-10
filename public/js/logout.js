@@ -1,2 +1,2 @@
-
-  
+// add async logout function
+ 
