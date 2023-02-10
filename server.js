@@ -3,34 +3,21 @@ const express = require("express");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
 const routes = require("./controllers");
-// const helpers = require("./utils/helpers");
+const helpers = require("./utils/helpers");
+
 const sequelize = require("./config/connection");
+
+// Create a new sequelize store using the express-session package
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
-//setting the use of express
 const app = express();
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+const PORT = process.env.PORT || 3001;
 
-app.engine(
-	"handlebars",
-	exphbs({
-		defaultLayout: "main",
-	})
-);
+const hbs = exphbs.create({ helpers });
 
-// requiring the routes
-require("./controllers/HTMLRoutes.js")(app);
-require("./controllers/index")(app);
-require("./controllers/api/apiRoutes")(app);
-require("./controllers/api/userRoutes")(app);
-require("./controllers/api/index")(app);
-
-const PORT = process.env.PORT || 3306;
-
-//for adding login session with Sequelize Store
+// Configure and link a session object with the sequelize store
 const sess = {
-	secret: "Secret Session",
+	secret: "Super secret secret",
 	cookie: {},
 	resave: false,
 	saveUninitialized: true,
@@ -39,9 +26,18 @@ const sess = {
 	}),
 };
 
+// Add express-session and store as Express.js middleware
 app.use(session(sess));
 
-//running our Express app
+app.engine("handlebars", hbs.engine);
+app.set("view engine", "handlebars");
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "public")));
+
+app.use(routes);
+
 sequelize.sync({ force: false }).then(() => {
 	app.listen(PORT, () => console.log("Now listening to the PORT"));
 });
