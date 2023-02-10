@@ -3,15 +3,23 @@ const express = require("express");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
 const routes = require("./controllers");
-const helpers = require("./utils/helpers");
+// const helpers = require("./utils/helpers");
 const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 //setting the use of express
 const app = express();
-const PORT = process.env.PORT || 3306;
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-// if we need helpers const hbs = exphbs.create({helpers});
+app.engine(
+	"handlebars",
+	exphbs({
+		defaultLayout: "main",
+	})
+);
+
+const PORT = process.env.PORT || 3306;
 
 //for adding login session with Sequelize Store
 const sess = {
