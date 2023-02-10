@@ -19,6 +19,13 @@ app.engine(
 	})
 );
 
+// requiring the routes
+require("./controllers/HTMLRoutes.js")(app);
+require("./controllers/index")(app);
+require("./controllers/api/apiRoutes")(app);
+require("./controllers/api/userRoutes")(app);
+require("./controllers/api/index")(app);
+
 const PORT = process.env.PORT || 3306;
 
 //for adding login session with Sequelize Store

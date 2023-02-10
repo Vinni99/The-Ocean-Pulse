@@ -1,5 +1,5 @@
 // add routes for
-const db = require("../models");
+const db = require("../../models");
 
 //accessing the db for the locals
 db.local.create({
