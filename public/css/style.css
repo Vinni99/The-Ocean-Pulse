@@ -25,13 +25,26 @@
     min-height: 60vh;
   }
   .content > aside {
-    background: beige;
+    background: rgb(0, 0, 0);
     flex: 1;
   }
   header, footer {
     background: rgb(147, 206, 237);
     height: 15vh;
   }
-  header, footer, article, aside {
+  header, footer {
     padding: 1rem;
   }
+
+  aside {
+    padding: 2rem;
+  }
+
+.carousel-item {
+  padding: 4rem;
+
+}
+
+.element{
+  font-family: 'Dela Gothic One', cursive;
+}
