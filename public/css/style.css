@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box; 
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    margin: 0;
+  }
+  .col-1 {
+    background: #D7E8D4;
+    flex: 1;
+  }
+  .col-2 {
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+  }
+  .content {
+    display: flex;
+    flex-direction: row;
+  }
+  .content > article {
+    flex: 3;
+    min-height: 60vh;
+  }
+  .content > aside {
+    background: rgb(0, 0, 0);
+    flex: 1;
+  }
+  header, footer {
+    background: rgb(147, 206, 237);
+    height: 15vh;
+  }
+  header, footer {
+    padding: 1rem;
+  }
+
+  aside {
+    padding: 2rem;
+  }
+
+.carousel-item {
+  padding: 4rem;
+
+}
+
+.element{
+  font-family: 'Dela Gothic One', cursive;
+}
