@@ -9,5 +9,5 @@ Ocean Pulse: Break Finder
 
 ## Mockup
 
-
+.
 GitHub Link: <https://github.com/Vinni99/The-Ocean-Pulse.git>
