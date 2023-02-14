@@ -1,10 +1,12 @@
 // add routes for HTML
 
 var isAuthenticated = require("../middleware/isAuthenticated");
+const router = require("express").Router();
 
-module.exports = function (app) {
+
+// module.exports = function (router) {
 	// get route for search locations
-	app.get("/searchLocation", function (req, res) {
+	router.get("/searchLocation", function (req, res) {
 		//if logged in render search locations
 		if (req.session.logged_in) {
 			res.redirect("searchLocation");
@@ -14,11 +16,22 @@ module.exports = function (app) {
 		}
 	});
 // makes the landing page home page
-	app.get("/", function (req, res) {
+	router.get("/", function (req, res) {
+		console.log("home page");
 		res.render("home");
 	});
 // checks for authentication for search location page.
-	app.get("/searchLocation", isAuthenticated, function (req, res) {
+	router.get("/searchLocation", isAuthenticated, function (req, res) {
 		res.render("searchLocation");
 	});
-};
+
+	router.get("/login", function (req, res) {
+		res.render("login");
+	});
+
+	router.get("/signup", function (req, res) {
+		res.render("signup");
+	});
+// };
+
+module.exports = router;
