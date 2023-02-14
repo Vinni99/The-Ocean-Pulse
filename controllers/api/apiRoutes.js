@@ -1,12 +1,38 @@
-// add routes for the locations models
-// const db = require("../../models");
+const router = require("express").Router();
+const { Comment } = require("../../models");
+const withAuth = require("../../middleware/isAuthenticated");
 
-//accessing the db for the locals
-  
-//get route for locations
+router.post("/", withAuth, async (req, res) => {
+	try {
+		const newComment = await comment.create({
+			...req.body,
+			user_id: req.session.user_id,
+		});
 
-//post route for comments
+		res.status(200).json(newComment);
+	} catch (err) {
+		res.status(400).json(err);
+	}
+});
 
-// appendFile.get;
+// router.delete("/:id", withAuth, async (req, res) => {
+// 	try {
+// 		const projectData = await Comment.destroy({
+// 			where: {
+// 				id: req.params.id,
+// 				user_id: req.session.user_id,
+// 			},
+// 		});
 
+// 		if (!projectData) {
+// 			res.status(404).json({ message: "No project found with this id!" });
+// 			return;
+// 		}
 
+// 		res.status(200).json(projectData);
+// 	} catch (err) {
+// 		res.status(500).json(err);
+// 	}
+// });
+
+module.exports = router;
