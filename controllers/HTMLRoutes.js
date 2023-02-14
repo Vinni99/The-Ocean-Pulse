@@ -1,6 +1,6 @@
 // add routes for HTML
 
-var isAuthenticated = require("../config/middleware/isAuthenticated");
+var isAuthenticated = require("../middleware/isAuthenticated");
 
 module.exports = function (app) {
 	// get route for search locations

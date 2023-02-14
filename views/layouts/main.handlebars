@@ -6,7 +6,7 @@
 		<title>Ocean Pulse</title>
 	</head>
 	<body>
-		<header>
+		<header class="display-flex justify-space-between align-center p-2">
 			{{! Nav bar: 
         Login (takes us to login handlebar) button class="nav-login"
         Logout (logs us out) class ="logout" button
@@ -14,16 +14,30 @@
         search (takes us to the location handlebar) class="search"
         home (takes us to hompage handlebars) button class = "home-btn"
          }}
+ <h1>
+      User Registry
+    </h1>
+    {{#if logged_in}}
+    <nav>
+      <button class="btn" id="logout">logout</button>
+    </nav>
+    {{/if}}
 		</header>
 
-		<Main>
+		<Main class="container container-fluid mt-5">
 			{{! this is where we will add other Handlebars 
             home page
             login page
             sign up
             searched location
             }}
+		{{{ body }}}	
 		</Main>
-		<footer>this is the footer</footer>
+		<footer>
+
+		</footer>
+    {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 	</body>
 </html>
