@@ -1,5 +1,5 @@
 // add routes for the locations models
-const db = require("../../models");
+// const db = require("../../models");
 
 //accessing the db for the locals
   
@@ -7,4 +7,6 @@ const db = require("../../models");
 
 //post route for comments
 
-appendFile.get;
+// appendFile.get;
+
+

@@ -1,2 +1,3 @@
+-- Active: 1674189611063@@127.0.0.1@3306@surf_db
 DROP DATABASE IF EXISTS surf_db; 
 CREATE DATABASE surf_db;
