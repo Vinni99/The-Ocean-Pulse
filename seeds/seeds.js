@@ -7,6 +7,13 @@ const surfSpots = require("./locationData.js");
 const seedDatabase = async () => {
 	await sequelize.sync({ force: true });
 
+  await User.bulkCreate(userData, {
+    individualHooks: true,
+    returning: true,
+  });
+console.log('\n----- DATABASE SEEDED -----\n')
+  process.exit(0);
+
 	await User.bulkCreate(userData, {
 		individualHooks: true,
 		returning: true,
