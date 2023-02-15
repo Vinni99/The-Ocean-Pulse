@@ -5,11 +5,17 @@ class Location extends Model {}
 
 Location.init(
 	{
-		surf_spot: {
-			type: DataTypes.STRING,
+		id: {
+			type: DataTypes.INTEGER,
 			allowNull: false,
 			primaryKey: true,
 			autoIncrement: true,
+		},
+		surf_spot: {
+			type: DataTypes.STRING,
+			allowNull: false,
+			// primaryKey: true,
+			// autoIncrement: true,
 		},
 		location: {
 			type: DataTypes.STRING,
@@ -35,7 +41,6 @@ Location.init(
 			type: DataTypes.STRING,
 			allowNull: false,
 		},
-    
 	},
 	{
 		sequelize,
