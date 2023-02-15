@@ -14,8 +14,6 @@ Location.init(
 		surf_spot: {
 			type: DataTypes.STRING,
 			allowNull: false,
-			// primaryKey: true,
-			// autoIncrement: true,
 		},
 		location: {
 			type: DataTypes.STRING,
