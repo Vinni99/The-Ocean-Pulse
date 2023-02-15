@@ -3,10 +3,10 @@ const router = require("express").Router();
 
 // module.exports = function (router) {
 // get route for search locations
-router.get("/searchLocation", function (req, res) {
+router.get("/locations", function (req, res) {
 	//if logged in render search locations
 	if (req.session.logged_in) {
-		res.redirect("searchLocation");
+		res.render("locations");
 		//if not logged in send to login page
 	} else {
 		res.render("login");
@@ -18,8 +18,8 @@ router.get("/", function (req, res) {
 	res.render("home");
 });
 // checks for authentication for search location page.
-router.get("/searchLocation", isAuthenticated, function (req, res) {
-	res.render("searchLocation");
+router.get("/locations", isAuthenticated, function (req, res) {
+	res.render("locations");
 });
 
 router.get("/login", function (req, res) {
@@ -30,5 +30,7 @@ router.get("/signup", function (req, res) {
 	res.render("signup");
 });
 // };
+
+
 
 module.exports = router;
