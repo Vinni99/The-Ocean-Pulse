@@ -10,7 +10,7 @@ const locationBtn = document.querySelector("#location-btn").innerHTML;
 // { Handlebars.compile(homeBtn)
 // }
 
- const response = await fetch(`/home`, {
+ const response = await fetch(`/comment`, {
     method: 'POST',
     body: JSON.stringify({
       dish_name,
@@ -22,13 +22,13 @@ const locationBtn = document.querySelector("#location-btn").innerHTML;
       'Content-Type': 'application/json',
     },
   });
-  //if the dish is added, the 'all' template will be rerendered
+  
   if (response.ok) {
     document.location.replace('/');
   } else {
-    alert('Failed to add dish');
+    alert('Failed to add comment');
   }
-}
+
 
 
 

@@ -1,10 +1,15 @@
 const router = require("express").Router();
 const { Comment } = require("../../models");
-const withAuth = require("../../middleware/isAuthenticated");
+const isAuthenticated = require("../../middleware/isAuthenticated");
 
-router.post("/", withAuth, async (req, res) => {
+// can i create a db for feedback or use a model?
+// router.get("/", (req, res) =>
+// 	readFromFile("./db/feedback.json").then((data) => res.json(JSON.parse(data)))
+// );
+
+router.post("/locations", isAuthenticated, async (req, res) => {
 	try {
-		const newComment = await comment.create({
+		const newComment = await Comment.create({
 			...req.body,
 			user_id: req.session.user_id,
 		});
