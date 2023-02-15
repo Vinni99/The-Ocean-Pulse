@@ -10,8 +10,9 @@ const seedDatabase = async () => {
     individualHooks: true,
     returning: true,
   });
-
+console.log('\n----- DATABASE SEEDED -----\n')
   process.exit(0);
+
 };
 
 seedDatabase();
