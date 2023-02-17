@@ -15,4 +15,13 @@ router.post("/locations", isAuthenticated, async (req, res) => {
 	}
 });
 
+router.get("/", async function (req, res) {
+	try {
+		const locationData = await Locations.findAll();
+		res.json(locationData);
+	} catch (error) {
+		res.json(error);
+	}
+});
+
 module.exports = router;
