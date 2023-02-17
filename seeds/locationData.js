@@ -1,3 +1,4 @@
+
 const locationData = [
 	{
 		surf_spot: "Ocean Beach",
@@ -373,5 +374,3 @@ module.exports = locationData;
 // 		"optimal_tide": "Mid to high"
 // 	}
 // ]
-
-
