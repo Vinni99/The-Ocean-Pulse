@@ -1,17 +1,15 @@
-<h2>Add new Location</h2>
-<div>
+<h1 class="text-center">Surf Spots</h1>
 
-</div>
-
-{{#each locationData as |location|}}
+{{#each location}}
 	<div class="text-center">
-		<h2>{{locations.surf_spot}}</h2>
-		<p>{{locations.location}}</p>
-		<p>Surf Type{{type}}</p>
-		<p>Optimal Swell Direction {{optimal_swell_direction}}</p>
-		<p>Optimal Wind {{optimal_wind}}</p>
-		<p>Optimal Swell Size {{optimal_swell_size}}</p>
-		<p>Optimal Tide {{optimal_tide}}</p>
+		<h2>{{surf_spot}}</h2>
+		<p>{{location}}</p>
+		<p>Surf Type:{{type}}</p>
+		<p>Optimal Swell Direction: {{optimal_swell_direction}}</p>
+		<p>Optimal Wind: {{optimal_wind}}</p>
+		<p>Optimal Swell Size: {{optimal_swell_size}}</p>
+		<p>Optimal Tide: {{optimal_tide}}</p>
 	</div>
 {{/each}}
+
 <script src="/js/locations.js"></script>

@@ -1,4 +1,4 @@
-const surfSpots = [
+const locationData = [
 	{
 		surf_spot: "Ocean Beach",
 		location: "San Francisco, CA",
@@ -184,7 +184,7 @@ const surfSpots = [
 	},
 ];
 
-module.exports = surfSpots;
+module.exports = locationData;
 
 
 // [
