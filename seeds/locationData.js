@@ -1,6 +1,6 @@
 
 // const router = require('express').Router();
-const surfSpots = [
+const locationData = [
     {
       surf_spot: 'Ocean Beach',
       location: 'San Francisco, CA',
@@ -186,4 +186,4 @@ const surfSpots = [
   
   
   
-  module.exports = router;
+  module.exports = locationData;
