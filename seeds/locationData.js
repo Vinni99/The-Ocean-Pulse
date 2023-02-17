@@ -1,5 +1,5 @@
 
-const router = require('express').Router();
+// const router = require('express').Router();
 const surfSpots = [
     {
       surf_spot: 'Ocean Beach',
