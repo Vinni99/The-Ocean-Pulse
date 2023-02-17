@@ -15,10 +15,10 @@ As a User, I want to be able to view the most righteous surf spots on the "Best"
 ## Credits
 
 Team Members:
-James Baxley | Github: [Kaneknah](https://github.com/Kaneknah)
-Vinícius Teixeira | [Vinni99](https://github.com/Vinni99)
-William Massie | [AltB22](https://github.com/AltB22)
-Beau Ben-Rhouma | Github: [BRhouma](https://github.com/BRhouma)
+- James Baxley | Github: [Kaneknah](https://github.com/Kaneknah)
+- Vinícius Teixeira | [Vinni99](https://github.com/Vinni99)
+- William Massie | [AltB22](https://github.com/AltB22)
+- Beau Ben-Rhouma | Github: [BRhouma](https://github.com/BRhouma)
 
 
 GitHub Link: <https://github.com/Vinni99/The-Ocean-Pulse.git>
