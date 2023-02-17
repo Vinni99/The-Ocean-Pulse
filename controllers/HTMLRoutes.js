@@ -11,7 +11,11 @@ const { Locations, User } = require("../models");
 router.get("/locations", isAuthenticated, async function (req, res) {
 	try {
 		const locationData = await Locations.findAll();
-		res.render("locations", { logged_in: req.session.logged_in, locationData });
+		console.log(locationData[0].surf_spot);
+		const location = locationData.map((location) =>
+			location.get({ plain: true })
+		);
+		res.render("locations", { location, logged_in: req.session.logged_in });
 	} catch (error) {
 		res.json(error);
 	}
@@ -82,3 +86,10 @@ router.get("/signup", function (req, res) {
 // });
 
 module.exports = router;
+
+
+
+
+
+
+
