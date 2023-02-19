@@ -25,19 +25,19 @@ Locations.init(
 		},
 		optimal_swell_direction: {
 			type: DataTypes.STRING,
-			allowNull: false,
+			allowNull: true,
 		},
 		optimal_wind: {
 			type: DataTypes.STRING,
-			allowNull: false,
+			allowNull: true,
 		},
 		optimal_swell_size: {
 			type: DataTypes.STRING,
-			allowNull: false,
+			allowNull: true,
 		},
 		optimal_tide: {
 			type: DataTypes.STRING,
-			allowNull: false,
+			allowNull: true,
 		},
 	},
 	{
