@@ -1,5 +1,6 @@
 const newFormHandler = async (event) => {
 	event.preventDefault();
+	event.preventDefault();
 
 	const surf_spot = document.querySelector("#surf-spot-name").value.trim();
 	const location = document.querySelector("#location").value.trim();

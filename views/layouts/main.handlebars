@@ -50,8 +50,8 @@
 								<li class="nav-item">
 									{{#if logged_in}}
 										<li class="nav-item">
-											<a class="nav-link">
-												<button id="logout">logout</button>
+											<a class="nav-link"
+												 id="logout" href="/login">logout</a>
 											</a>
 										</li>
 									{{else}}
@@ -160,47 +160,3 @@
 
 	</body>
 </html>
-
-{{!-- <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Ocean Pulse</title>
-	</head>
-	<body>
-		<header class="display-flex justify-space-between align-center p-2">
-			{{! Nav bar: 
-        Login (takes us to login handlebar) button class="nav-login"
-        Logout (logs us out) class ="logout" button
-        sign up (take sus to the sign up handlebar) button class="nav-sign-up"
-        search (takes us to the location handlebar) class="search"
-        home (takes us to hompage handlebars) button class = "home-btn"
-         }}
- <h1>
-      User Registry
-    </h1>
-    {{#if logged_in}}
-    <nav>
-      <button class="btn" id="logout">logout</button>
-    </nav>
-    {{/if}}
-		</header>
-
-		<Main class="container container-fluid mt-5">
-			{{! this is where we will add other Handlebars 
-            home page
-            login page
-            sign up
-            searched location
-            }}
-		{{{ body }}}	
-		</Main>
-		<footer>
-
-		</footer>
-    {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-	</body>
-</html> --}}
