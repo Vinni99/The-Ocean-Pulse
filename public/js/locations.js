@@ -1,7 +1,8 @@
-const addLocationFormHandler = async (event) => {
-	event.preventDefault();
-	document.location.replace("/addlocation");
+// const addLocationBtn = async (event) => {
+// 	event.preventDefault();
+// 	document.location.replace("/addLocation");
+// };
 
-}
-
-document.querySelector("location-btn").addEventListener("submit", addLocationFormHandler);
+// document
+// 	.querySelector("#location-btn")
+// 	.addEventListener("click", addLocationBtn);

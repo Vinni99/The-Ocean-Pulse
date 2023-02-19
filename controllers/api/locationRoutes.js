@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { Locations } = require("../../models");
 const isAuthenticated = require("../../middleware/isAuthenticated");
 
-router.post("/locations", isAuthenticated, async (req, res) => {
+router.post("/", isAuthenticated, async (req, res) => {
 	try {
 		const newLocation = await Locations.create({
 			...req.body,
@@ -24,18 +24,5 @@ router.get("/", async function (req, res) {
 	}
 });
 
-router.post("/newLocation", async (req, res) => {
-	try {
-		const newLocation = await Locations.create({
-			...req.body,
-			user_id: req.session.user_id,
-		});
-
-		res.status(200).json(newLocation);
-	} catch (err) {
-		res.status(400).json(err);
-	}
-});
 
 module.exports = router;
-
