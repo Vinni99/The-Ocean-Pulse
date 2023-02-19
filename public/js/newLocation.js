@@ -8,4 +8,19 @@ const newFormHandler = async (event) => {
     const optimalWind = document.querySelector('#optimal-wind').value.trim();
     const optimalSwellSize = document.querySelector('#optimal-swell-size').value.trim();
     const optimalTide = document.querySelector('#optimal-tide').value.trim();
-}
+
+    if (surfSpot && locationName && beachType && optimalSwellDirection &&
+        optimalWind && optimalSwellSize && optimalTide) {
+  
+        const response = await fetch(`/api/locations`, {
+          method: 'POST',
+          body: JSON.stringify({
+            surfSpot,
+            locationName,
+            beachType,
+            optimalSwellDirection,
+            optimalWind,
+            optimalSwellSize
+          })
+        })
+    } }
