@@ -31,7 +31,7 @@ router.get("/login", function (req, res) {
 });
 
 router.get("/signup", function (req, res) {
-	res.render("signup", { logged_in: req.session.logged_in });
+	res.render("signUp", { logged_in: req.session.logged_in });
 });
 
 
