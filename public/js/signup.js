@@ -16,6 +16,7 @@ const signupFormHandler = async (event) => {
 			document.location.replace("/login");
 		} else {
 			alert(response.statusText);
+			// alert("testing deployed");
 		}
 	}
 };
